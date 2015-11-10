@@ -12,7 +12,7 @@ clear
 THREAD="-j$(grep -c ^processor /proc/cpuinfo)"
 KERNEL="Image"
 DTBIMAGE="dtb"
-DEFCONFIG="bullhead_defconfig"
+DEFCONFIG="phasma_defconfig"
 
 # Kernel Details
 VER=".R1.bullhead."
