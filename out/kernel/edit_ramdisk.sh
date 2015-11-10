@@ -66,10 +66,10 @@ if  grep -qr ro.secure=1 /tmp/ramdisk/default.prop; then
 fi
 
 if  grep -qr verity_load_state /tmp/ramdisk/init.bullhead.rc; then
- sed -i "s/verity_load_state/#verity_load_state/" /tmp/ramdisk/init.angler.rc
+ sed -i "s/verity_load_state/#verity_load_state/" /tmp/ramdisk/init.bullhead.rc
 fi
 if  grep -qr verity_update_state /tmp/ramdisk/init.bullhead.rc; then
- sed -i "s/verity_update_state/#verity_update_state/" /tmp/ramdisk/init.angler.rc
+ sed -i "s/verity_update_state/#verity_update_state/" /tmp/ramdisk/init.bullhead.rc
 fi
 
 
