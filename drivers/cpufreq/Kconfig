@@ -142,7 +142,11 @@ config CPU_FREQ_DEFAULT_GOV_IMPULSE
 config CPU_FREQ_DEFAULT_GOV_DARKNESS
 	bool "darkness"
 	select CPU_FREQ_GOV_DARKNESS
-	
+
+config CPU_FREQ_DEFAULT_GOV_DANCEDANCE
+	bool "dancedance"
+	select CPU_FREQ_GOV_DANCEDANCE
+
 config CPU_FREQ_DEFAULT_GOV_WHEATLEY
 	bool "wheatley"
 	select CPU_FREQ_GOV_WHEATLEY
@@ -306,6 +310,10 @@ config CPU_FREQ_GOV_BIOSHOCK
 
 config CPU_FREQ_GOV_DARKNESS
 	tristate "'darkness' cpufreq darkness"
+	depends on CPU_FREQ
+
+config CPU_FREQ_GOV_DANCEDANCE
+	tristate "'dancedance' cpufreq dancedance"
 	depends on CPU_FREQ
 
 config CPU_FREQ_GOV_BLUACTIVE
