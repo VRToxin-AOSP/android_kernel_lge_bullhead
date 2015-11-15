@@ -15,12 +15,12 @@ DTBIMAGE="dtb"
 DEFCONFIG="phasma_defconfig"
 
 # Kernel Details
-VER=".R1.7.bullhead."
+VER=".R1.7.bullhead"
 AK_VER="$BASE_AK_VER$VER"
 
 # Vars
 BASE_AK_VER="Phasma"
-AK_VER="$BASE_AK_VER$VER$TC"
+AK_VER="$BASE_AK_VER$VER"
 export LOCALVERSION=~`echo $AK_VER`
 export LOCALVERSION=~`echo $AK_VER`
 export ARCH=arm64
