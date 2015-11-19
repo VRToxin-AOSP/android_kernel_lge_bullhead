@@ -15,7 +15,7 @@ DTBIMAGE="dtb"
 DEFCONFIG="phasma_defconfig"
 
 # Kernel Details
-VER=".R2.1.bullhead"
+VER=".R2.2.bullhead"
 AK_VER="$BASE_AK_VER$VER"
 
 # Vars
