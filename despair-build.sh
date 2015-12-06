@@ -15,8 +15,8 @@ DTBIMAGE="dtb"
 DEFCONFIG="phasma_defconfig"
 
 # Kernel Details
-VER=".R3.9.bullhead"
-AK_VER="$BASE_AK_VER$VER"
+VER=".R4.bullhead."
+AK_VER="$BASE_AK_VER$VER$TC"
 
 # Vars
 BASE_AK_VER="Phasma"
@@ -88,28 +88,21 @@ echo "Making Kylo Kernel:"
 echo "-----------------"
 echo -e "${restore}"
 
-while read -p "Do you want to use UBERTC(1) or SaberMod(2) or Linaro(3)? " echoice
+while read -p "Do you want to use UBERTC 4.9(1) or UBERTC 5.2(2)? " echoice
 do
 case "$echoice" in
 	1 )
-		export CROSS_COMPILE=${HOME}/android/uberbuild/out/aarch64-linux-android-5.2-kernel/bin/aarch64-linux-android-
-		TC="UBER"
+		export CROSS_COMPILE=${HOME}/android/uberbuild/out/aarch64-linux-android-4.9-kernel/bin/aarch64-linux-android-
+		TC="UBER4.9"
 		echo
 		echo "Using UBERTC"
 		break
 		;;
 	2 )
-		export CROSS_COMPILE=/home/despairfactor/tmp/arm-linux-gnueabi-5.2/bin/arm-eabi-
-		TC="SM"
+		export CROSS_COMPILE=${HOME}/android/uberbuild/out/aarch64-linux-android-5.2-kernel/bin/aarch64-linux-android-
+		TC="UBER5.2"
 		echo
 		echo "Using SM"
-		break
-		;;
-	3 )
-		export CROSS_COMPILE=${HOME}/android/linarobuild/out/linaro-arm-eabi-5.2/bin/arm-eabi-
-		TC="LINARO"
-		echo
-		echo "Using Linaro"
 		break
 		;;
 	* )
